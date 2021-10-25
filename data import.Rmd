@@ -22,6 +22,12 @@ litters_df = janitor::clean_names(litters_df)
 
 ## Take a look at the data
 
+```{r}
+litters_df
+head(litters_df)
+tail(litters_df)
+```
+
 
 
 
