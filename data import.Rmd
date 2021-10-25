@@ -45,6 +45,7 @@ Read in excel file
 
 ```{r}
 mlb_df = read_excel("./data/mlb11.xlsx")
+mlb_df
 ```
 
 Read in a SAS file
@@ -52,6 +53,18 @@ Read in a SAS file
 ```{r}
 pulse_df = read_sas("./data/public_pulse_data.sas7bdat")
 ```
+
+##Exporting data
+
+write_csv(mlb_df, "./data/mlb_subtable.csv")
+
+
+
+
+
+
+
+
 
 
 
