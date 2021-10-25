@@ -14,6 +14,7 @@ litters_df = read_csv("./data/FAS_litters.csv")
 litters_df = janitor::clean_names(litters_df)
 ```
 
+
 ## 'select'
 
 Choose some columns and not others
@@ -42,6 +43,8 @@ select(litters_df,starts_with("gd"))
 select(litters_df,litter_number, everything())
 relocate(litters_df,litter_number)
 ```
+
+
 
 
 ## 'filter'
@@ -79,7 +82,14 @@ mutate(litters_df,
 
 
 
+## 'arrange'
 
+Put things in order
+
+```{r}
+arrange(litters_df,pups_born_alive)
+arrange(litters_df,pups_born_alive, gd0_weight)
+```
 
 
 
