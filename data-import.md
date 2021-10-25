@@ -93,3 +93,41 @@ tail(litters_df)
     ## 5 Low8  #99                 23.5        39            20               6
     ## 6 Low8  #110                25.5        42.7          20               7
     ## # … with 2 more variables: pups_dead_birth <dbl>, pups_survive <dbl>
+
+## Options to read csv
+
+``` r
+#skip 10 rows
+litters_df = read_csv("./data/FAS_litters.csv",skip=10)
+```
+
+    ## New names:
+    ## * `8` -> `8...6`
+    ## * `8` -> `8...8`
+
+    ## Rows: 39 Columns: 8
+
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## chr (2): Con8, #3/5/2/2/95
+    ## dbl (6): 28.5, NA, 20, 8...6, 0, 8...8
+
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+
+``` r
+#identify NAs
+litters_df = read_csv("./data/FAS_litters.csv", na = c("", "NA","?", 999))
+```
+
+    ## Rows: 49 Columns: 8
+
+    ## ── Column specification ────────────────────────────────────────────────────────
+    ## Delimiter: ","
+    ## chr (2): Group, Litter Number
+    ## dbl (6): GD0 weight, GD18 weight, GD of Birth, Pups born alive, Pups dead @ ...
+
+    ## 
+    ## ℹ Use `spec()` to retrieve the full column specification for this data.
+    ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.

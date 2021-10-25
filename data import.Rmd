@@ -28,6 +28,14 @@ head(litters_df)
 tail(litters_df)
 ```
 
+## Options to read csv
+
+```{r}
+#skip 10 rows
+litters_df = read_csv("./data/FAS_litters.csv",skip=10)
+#identify NAs
+litters_df = read_csv("./data/FAS_litters.csv", na = c("", "NA","?", 999))
+```
 
 
 
